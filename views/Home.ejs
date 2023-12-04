@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>RESTful API 練習</h1>
+    <h3>
+      按現今最流行的網頁設計風格REST，使用者可在此處新增各類食物及其營素並做CRUD操作
+    </h3>
+    <ul class="content-ul">
+      <%findData.forEach(Food=>{%>
+      <li><a href="/food/<%= Food._id%>"><%=Food.name%></a></li>
+      <%})%>
+    </ul>
+    <br />
+    <a href="/food/new">新增食物</a>
+  </body>
+</html>

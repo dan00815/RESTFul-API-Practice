@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1><%= FoundData.name%>的頁面</h1>
+    <table>
+      <tr>
+        <th>份數</th>
+        <td><%= FoundData.per%></td>
+      </tr>
+
+      <tr>
+        <th>種類</th>
+        <td><%= FoundData.category%></td>
+      </tr>
+      <tr>
+        <th>熱量</th>
+        <td><%= FoundData.composition.cal%>大卡</td>
+      </tr>
+      <tr>
+        <th>水分</th>
+        <td><%= FoundData.composition.water%>g</td>
+      </tr>
+      <tr>
+        <th>蛋白質</th>
+        <td><%= FoundData.composition.protein%>g</td>
+      </tr>
+      <tr>
+        <th>脂肪</th>
+        <td><%= FoundData.composition.fat%>g</td>
+      </tr>
+      <tr>
+        <th>碳水</th>
+        <td><%= FoundData.composition.carb%>g</td>
+      </tr>
+    </table>
+
+    <div class="delete-form">
+      <form action="/food/<%= FoundData._id%>?_method=DELETE" method="POST">
+        <button>刪除食物</button>
+      </form>
+    </div>
+
+    <br />
+    <a href="/food">返回首頁</a>
+  </body>
+</html>

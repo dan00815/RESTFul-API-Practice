@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= ProfileData.name%>的頁面</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1><%= ProfileData.name%>的營養素頁面</h1>
+    <table>
+      <tr>
+        <th>份數</th>
+        <td><%= ProfileData.per%></td>
+      </tr>
+
+      <tr>
+        <th>種類</th>
+        <td><%= ProfileData.category%></td>
+      </tr>
+      <tr>
+        <th>熱量</th>
+        <td><%= ProfileData.composition.cal%>大卡</td>
+      </tr>
+      <tr>
+        <th>水分</th>
+        <td><%= ProfileData.composition.water%>g</td>
+      </tr>
+      <tr>
+        <th>蛋白質</th>
+        <td><%= ProfileData.composition.protein%>g</td>
+      </tr>
+      <tr>
+        <th>脂肪</th>
+        <td><%= ProfileData.composition.fat%>g</td>
+      </tr>
+      <tr>
+        <th>碳水</th>
+        <td><%= ProfileData.composition.carb%>g</td>
+      </tr>
+    </table>
+    <br />
+    <a href="/food">返回首頁</a>
+    <a href="/food/<%=ProfileData._id%>/modify">修改內容</a>
+    <a href="/food/<%=ProfileData._id%>/delete">刪除食物</a>
+  </body>
+</html>
